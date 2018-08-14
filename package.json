@@ -1,10 +1,8 @@
 {
     "name": "ionic2-calendar-with-more-week-options",
-    "version": "0.4.3",
+    "version": "0.1.1",
     "description": "Ionic2 calendar component with more week options",
     "keywords": [
-        "Ionic2",
-        "calendar"
     ],
     "author": {
         "name": "bobthebob"
@@ -12,14 +10,12 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/twinssbc/Ionic2-Calendar.git"
+        "url": "git+https://github.com/kkaczmarzyk/calendar.git"
     },
     "scripts": {
-        "build": "rm -rf dist && tsc && cp package.json dist/package.json",
-        "build-prod": "rm -rf aot && node_modules/.bin/ngc -p tsconfig-aot.json",
-        "copy_static_files": "cp -r package.json README.md LICENSE tsconfig.json typings.json typings dist/",
-        "copy_static_files_prod": "cp -r package.json README.md LICENSE tsconfig.json aot/",
-        "dev": "tsc --watch"
+        "build": "tsc",
+        "version": "npm run format && git add -A src",
+        "postversion": "git push && git push --tags"
     },
     "main": "./index.js",
     "dependencies": {},
